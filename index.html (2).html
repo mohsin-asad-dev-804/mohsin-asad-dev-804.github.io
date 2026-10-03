@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hazim Gujjar | Professional Website Developer</title>
+<meta name="description" content="I design and develop modern, responsive and professional websites for businesses, brands and individuals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060813;--bg2:#0b0f20;--ink:#eef1ff;--mute:#a0a9cc;--line:rgba(150,170,255,.15);--glass:rgba(20,26,52,.55);--a:#6ee7ff;--b:#8b7bff;--c:#34d399;--fd:'Sora','Segoe UI',system-ui,sans-serif;--fb:'Inter','Segoe UI',system-ui,sans-serif;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+*,*::before,*::after{box-sizing:inherit;margin:0}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--fb);overflow-x:hidden;-webkit-font-smoothing:antialiased;background-image:radial-gradient(900px 500px at 85% -5%,rgba(139,123,255,.18),transparent 60%),radial-gradient(700px 500px at -5% 35%,rgba(110,231,255,.1),transparent 60%)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--a);outline-offset:3px;border-radius:8px}
+h1,h2,h3{font-family:var(--fd);line-height:1.12;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,4.2vw,3rem);max-width:20ch}
+p{color:var(--mute);max-width:62ch}
+.wrap{width:min(1160px,100% - 36px);margin-inline:auto}
+section{padding:clamp(64px,9vw,112px) 0}
+.sub{margin-top:14px}.head{margin-bottom:48px}
+.glass{background:var(--glass);border:1px solid var(--line);border-radius:20px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+header{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;padding:12px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:9px 12px 9px 22px;border-radius:999px;position:relative}
+.logo{font:800 1.1rem var(--fd);display:flex;align-items:center;gap:10px}
+.logo i{width:18px;height:18px;border-radius:5px;background:linear-gradient(135deg,var(--a),var(--b));transform:rotate(45deg);box-shadow:0 0 16px rgba(110,231,255,.5)}
+.links{display:flex;gap:24px;font-size:.92rem;color:var(--mute)}
+.links a{padding:4px 0;border-bottom:1px solid transparent;transition:color .25s,border-color .25s}
+.links a:hover{color:var(--ink);border-color:var(--a)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 26px;border-radius:999px;font:600 .95rem var(--fb);border:1px solid var(--line);color:var(--ink);background:transparent;cursor:pointer;transition:transform .25s,box-shadow .3s,background .3s}
+.btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.07)}
+.btn.pri{background:linear-gradient(120deg,var(--a),var(--b));color:#050716;border:0;box-shadow:0 8px 28px rgba(110,231,255,.2)}
+.btn.pri:hover{box-shadow:0 10px 42px rgba(139,123,255,.55)}
+.btn.wa{background:#25d366;color:#04210f;border:0}.btn.wa:hover{box-shadow:0 10px 34px rgba(37,211,102,.4);background:#2fe074}
+.btn.sm{padding:10px 20px}
+.btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.burger{display:none;width:44px;height:44px;border-radius:50%;background:none;border:1px solid var(--line);color:var(--ink);font-size:1.15rem;cursor:pointer}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+h1{font-size:clamp(2.4rem,5.6vw,4.6rem);font-weight:800}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:1.12rem;margin-top:22px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero .wrap>div:first-child>*{animation:in .9s cubic-bezier(.2,.7,.2,1) both}
+.hero p{animation-delay:.15s!important}.hero .cta{animation-delay:.3s!important}
+@keyframes in{from{opacity:0;transform:translateY(24px)}}
+.stage{perspective:1200px;height:min(480px,86vw);display:grid;place-items:center}
+.rig{position:relative;width:min(380px,80vw);aspect-ratio:1.1;transform-style:preserve-3d;transform:rotateX(55deg) rotateZ(-35deg);transition:transform .25s ease-out}
+.pane{position:absolute;inset:0;border-radius:18px;border:1px solid rgba(110,231,255,.4);background:linear-gradient(145deg,rgba(110,231,255,.14),rgba(139,123,255,.12));backdrop-filter:blur(6px);box-shadow:0 0 40px rgba(110,231,255,.15);animation:lift 6s ease-in-out infinite}
+.pane:nth-child(1){transform:translateZ(0);opacity:.55}
+.pane:nth-child(2){transform:translateZ(46px);animation-delay:-1.5s;border-color:rgba(139,123,255,.55)}
+.pane:nth-child(3){transform:translateZ(92px);animation-delay:-3s;display:grid;align-content:start;gap:12px;padding:22px;background:linear-gradient(145deg,rgba(20,30,70,.8),rgba(30,20,80,.7))}
+.pane:nth-child(3) i{display:block;height:12px;border-radius:6px;background:rgba(255,255,255,.14)}
+.pane:nth-child(3) i:nth-child(1){width:40%;background:linear-gradient(90deg,var(--a),var(--b))}
+.pane:nth-child(3) i:nth-child(3){width:75%}.pane:nth-child(3) i:nth-child(4){width:55%}
+.pane:nth-child(3) b{display:block;height:58px;border-radius:10px;background:radial-gradient(circle at 30% 40%,rgba(110,231,255,.5),rgba(139,123,255,.25))}
+@keyframes lift{50%{translate:0 0 16px}}
+/* cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{padding:28px 26px;position:relative;overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(340px circle at var(--mx,50%) var(--my,0%),rgba(110,231,255,.14),transparent 60%);opacity:0;transition:opacity .35s}
+.card:hover{transform:translateY(-6px);border-color:rgba(110,231,255,.45);box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.card:hover::before{opacity:1}.card>*{position:relative}
+.ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;margin-bottom:20px;background:linear-gradient(140deg,rgba(110,231,255,.2),rgba(139,123,255,.2));border:1px solid var(--line)}
+.ico svg{width:22px;height:22px;stroke:var(--a);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.15rem;margin-bottom:8px}.card p{font-size:.94rem}
+/* work */
+.proj{overflow:hidden;transition:transform .35s,border-color .35s}
+.proj:hover{transform:translateY(-6px);border-color:rgba(139,123,255,.55)}
+.shot{aspect-ratio:16/10;position:relative;background:linear-gradient(140deg,color-mix(in srgb,var(--p) 30%,#0a0d1c),#0a0d1c 70%);border-bottom:1px solid var(--line);overflow:hidden}
+.shot .bar{height:22px;background:rgba(0,0,0,.35);display:flex;gap:5px;padding:8px}
+.shot .bar i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.3)}
+.shot .m{position:absolute;inset:34px 16px 16px;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1.6fr 1fr;gap:9px;transition:transform .5s}
+.proj:hover .m{transform:scale(1.04)}
+.m div{border-radius:9px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08)}
+.m div:first-child{grid-column:span 3;background:radial-gradient(circle at 25% 50%,color-mix(in srgb,var(--p) 65%,transparent),rgba(255,255,255,.04) 70%)}
+.m div:last-child{background:color-mix(in srgb,var(--p) 25%,transparent)}
+.pb{padding:22px 24px 26px}.pb h3{font-size:1.2rem;margin-bottom:6px}.pb p{font-size:.92rem}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}.tags span{font-size:.78rem;padding:4px 11px;border-radius:999px;border:1px solid var(--line);color:var(--mute)}
+.note{margin-top:28px;font-size:.86rem}
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.why .card:nth-child(n+5){grid-column:span 1}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr)}
+.step{padding-right:22px;position:relative}
+.step::before{content:"";position:absolute;top:19px;left:50px;right:6px;height:1px;background:linear-gradient(90deg,var(--a),transparent)}
+.step:last-child::before{display:none}
+.dot{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:700 .95rem var(--fd);background:var(--bg2);border:1px solid var(--a);box-shadow:0 0 20px rgba(110,231,255,.3);margin-bottom:20px;position:relative}
+.step h3{font-size:1.1rem;margin-bottom:8px}.step p{font-size:.93rem}
+/* contact */
+#contact{padding-top:clamp(50px,7vw,90px)}
+.cbox{padding:clamp(26px,5vw,56px);display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(28px,5vw,60px);background:linear-gradient(150deg,rgba(40,50,110,.5),var(--glass));border-color:rgba(110,231,255,.35);box-shadow:0 0 90px rgba(139,123,255,.18)}
+.det{display:grid;gap:18px;margin-top:30px}
+.det div{display:grid;gap:2px}.det small{color:var(--mute);font-size:.82rem}
+.det a.v{font:600 1.1rem var(--fd);word-break:break-all;width:max-content;max-width:100%;border-bottom:1px solid var(--line);transition:border-color .25s,color .25s}
+.det a.v:hover{color:var(--a);border-color:var(--a)}
+.cb{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+form{display:grid;gap:16px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:grid;gap:7px;font-size:.86rem;color:var(--mute)}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--ink);background:rgba(6,8,20,.65);border:1px solid var(--line);border-radius:12px;padding:13px 15px;width:100%;transition:border-color .25s,box-shadow .25s}
+select option{background:#0b0f20}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--a);box-shadow:0 0 0 3px rgba(110,231,255,.15)}
+textarea{min-height:120px;resize:vertical}
+#msg{display:none;padding:13px 15px;border-radius:12px;font-size:.9rem;background:rgba(110,231,255,.1);border:1px solid rgba(110,231,255,.4)}
+.hint{font-size:.8rem}
+footer{border-top:1px solid var(--line);padding:44px 0 34px;margin-top:30px}
+.foot{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+.foot nav{display:flex;flex-wrap:wrap;gap:20px;font-size:.92rem;color:var(--mute)}
+.foot nav a:hover{color:var(--a)}
+.fine{margin-top:26px;font-size:.82rem}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .8s,transform .8s}.rv.on{opacity:1;transform:none}
+@media(max-width:1020px){.grid3{grid-template-columns:repeat(2,1fr)}.why{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr);row-gap:36px}.step:nth-child(2)::before{display:none}}
+@media(max-width:860px){
+.hero .wrap,.cbox{grid-template-columns:1fr}.hero{padding-top:110px}.stage{height:340px;order:-1}
+.burger{display:block}.nav>.btn{display:none}
+.links{position:absolute;top:calc(100% + 8px);left:0;right:0;flex-direction:column;gap:2px;padding:14px;border-radius:20px;background:rgba(10,14,30,.96);border:1px solid var(--line);display:none}
+.links.open{display:flex}.links a{padding:12px;border:0}}
+@media(max-width:620px){.grid3,.why,.steps,.f2{grid-template-columns:1fr}.step::before{display:none}.cta .btn,.cb .btn{flex:1 1 100%}.foot{flex-direction:column;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="nav glass">
+<a class="logo" href="#top" aria-label="Back to top"><i></i>Hazim Gujjar</a>
+<nav class="links" id="links" aria-label="Main">
+<a href="#services">Services</a><a href="#why">Why Me</a><a href="#work">My Work</a><a href="#how">How It Works</a><a href="#contact">Contact</a>
+</nav>
+<a class="btn pri sm" href="#contact">Contact Me</a>
+<button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+</div></div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+<div>
+<h1>Professional Websites That Help Your <em>Business Grow</em></h1>
+<p>I design and develop modern, responsive and professional websites for businesses, brands and individuals.</p>
+<div class="cta"><a class="btn pri" href="#work">View My Work</a><a class="btn" href="#contact">Contact Me</a></div>
+</div>
+<div class="stage" aria-hidden="true"><div class="rig" id="rig"><div class="pane"></div><div class="pane"></div><div class="pane"><i></i><b></b><i></i><i></i></div></div></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+<div class="head rv"><h2>Websites for every kind of business</h2><p class="sub">Whatever you need online, I build it to look sharp and work well on every screen.</p></div>
+<div class="grid3">
+<article class="card glass rv"><div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div><h3>Business Websites</h3><p>Clear, credible sites that present your company, services and contact details professionally.</p></article>
+<article class="card glass rv"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></div><h3>Portfolio Websites</h3><p>Showcase your work and personality with a polished site that makes people want to hire you.</p></article>
+<article class="card glass rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 6 6.5.5-5 4.3 1.6 6.4L12 16.5 6.4 20.200 8 13.800 3 9.500 9.500 9z"/></svg></div><h3>Landing Pages</h3><p>Focused single pages built to turn visitors into enquiries, bookings or sign-ups.</p></article>
+<article class="card glass rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.5 11h10L20 7H6"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg></div><h3>E-commerce Websites</h3><p>Online stores with clean product pages, easy browsing and a smooth path to checkout.</p></article>
+<article class="card glass rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M7 3v8a2 2 0 002 2v8M11 3v8M7 7h4M17 3c-2 2-2.500 5-2 8h2v10"/></svg></div><h3>Restaurant Websites</h3><p>Appetizing menus, opening hours, location maps and easy ways for guests to reach you.</p></article>
+<article class="card glass rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6"/></svg></div><h3>Real Estate Websites</h3><p>Property listings with strong photo galleries, filters and simple enquiry forms.</p></article>
+<article class="card glass rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5zM6 11.500V16c3 2.500 9 2.500 12 0v-4.500"/></svg></div><h3>School &amp; Academy Websites</h3><p>Informative sites for courses, admissions, events and announcements that parents trust.</p></article>
+<article class="card glass rv"><div class="ico"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div><h3>AI &amp; Technology Websites</h3><p>Modern, product-focused sites for AI tools, startups and technology companies.</p></article>
+<article class="card glass rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></div><h3>Custom Websites</h3><p>Something different in mind? I build blogs, special features and fully custom responsive designs.</p></article>
+</div></div></section>
+
+<section id="why"><div class="wrap">
+<div class="head rv"><h2>Why choose me</h2></div>
+<div class="why">
+<article class="card glass rv"><h3>Modern designs</h3><p>Fresh, current layouts that make your brand look up to date.</p></article>
+<article class="card glass rv"><h3>Mobile responsive</h3><p>Every site is built to work smoothly on phones, tablets and desktops.</p></article>
+<article class="card glass rv"><h3>Fast and clean</h3><p>Lightweight code so pages load quickly and stay easy to maintain.</p></article>
+<article class="card glass rv"><h3>User-friendly</h3><p>Simple navigation that helps visitors find what they need fast.</p></article>
+<article class="card glass rv"><h3>Professional appearance</h3><p>A polished look that helps customers trust you from the first visit.</p></article>
+<article class="card glass rv"><h3>Custom solutions</h3><p>Built around your goals instead of a one-size-fits-all template.</p></article>
+<article class="card glass rv"><h3>Client-focused</h3><p>I listen first, share progress often and welcome your feedback.</p></article>
+</div></div></section>
+
+<section id="work"><div class="wrap">
+<div class="head rv"><h2>My work</h2><p class="sub">Sample concepts that show the kinds of websites I can build for you.</p></div>
+<div class="grid3">
+<article class="proj glass rv" style="--p:#8b7bff"><div class="shot"><div class="bar"><i></i><i></i><i></i></div><div class="m"><div></div><div></div><div></div><div></div></div></div><div class="pb"><h3>AI Agency Website</h3><p>A dark, futuristic site for an AI automation studio with services, case highlights and a booking form.</p><div class="tags"><span>AI</span><span>Animations</span><span>Lead form</span></div></div></article>
+<article class="proj glass rv" style="--p:#ff9466"><div class="shot"><div class="bar"><i></i><i></i><i></i></div><div class="m"><div></div><div></div><div></div><div></div></div></div><div class="pb"><h3>Restaurant Website</h3><p>Menu with categories, opening hours, location and a one-tap table reservation button.</p><div class="tags"><span>Menu</span><span>Reservations</span><span>Mobile first</span></div></div></article>
+<article class="proj glass rv" style="--p:#38bdf8"><div class="shot"><div class="bar"><i></i><i></i><i></i></div><div class="m"><div></div><div></div><div></div><div></div></div></div><div class="pb"><h3>Business Website</h3><p>A trustworthy company site covering services, team, FAQs and clear contact options.</p><div class="tags"><span>Corporate</span><span>SEO-ready</span><span>Contact</span></div></div></article>
+<article class="proj glass rv" style="--p:#c084fc"><div class="shot"><div class="bar"><i></i><i></i><i></i></div><div class="m"><div></div><div></div><div></div><div></div></div></div><div class="pb"><h3>Personal Portfolio</h3><p>A creative portfolio with project galleries, a short bio and a downloadable resume link.</p><div class="tags"><span>Gallery</span><span>Resume</span><span>Personal brand</span></div></div></article>
+<article class="proj glass rv" style="--p:#34d399"><div class="shot"><div class="bar"><i></i><i></i><i></i></div><div class="m"><div></div><div></div><div></div><div></div></div></div><div class="pb"><h3>E-commerce Website</h3><p>A product catalog with category filters, cart flow and a clean, distraction-free checkout.</p><div class="tags"><span>Catalog</span><span>Cart</span><span>Responsive</span></div></div></article>
+<article class="proj glass rv" style="--p:#facc15"><div class="shot"><div class="bar"><i></i><i></i><i></i></div><div class="m"><div></div><div></div><div></div><div></div></div></div><div class="pb"><h3>Real Estate Website</h3><p>Property listings with photo galleries, price and location filters and viewing requests.</p><div class="tags"><span>Listings</span><span>Filters</span><span>Enquiries</span></div></div></article>
+</div>
+<p class="note rv">These are demo concepts created to show my style and range. They are not real client projects.</p>
+</div></section>
+
+<section id="how"><div class="wrap">
+<div class="head rv"><h2>How it works</h2></div>
+<div class="steps">
+<div class="step rv"><div class="dot">1</div><h3>Tell Me Your Idea</h3><p>Share your goals, your business and what you want your website to do.</p></div>
+<div class="step rv"><div class="dot">2</div><h3>I Design Your Website</h3><p>I create a modern design for you to review and approve.</p></div>
+<div class="step rv"><div class="dot">3</div><h3>I Develop &amp; Test It</h3><p>I build the site and test it on phones, tablets and desktops.</p></div>
+<div class="step rv"><div class="dot">4</div><h3>Your Website Goes Live</h3><p>Your finished website is launched and ready for customers.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap">
+<div class="cbox glass rv">
+<div>
+<h2>Let's build your website</h2>
+<p class="sub">Tell me what you need and I will get back to you personally.</p>
+<div class="det">
+<div><small>Email</small><a class="v" href="mailto:hazimgujjar477@gmail.com">hazimgujjar477@gmail.com</a></div>
+<div><small>Phone / WhatsApp</small><a class="v" href="tel:+923160994765">03160994765</a></div>
+</div>
+<div class="cb">
+<a class="btn pri" href="mailto:hazimgujjar477@gmail.com?subject=Website%20Enquiry"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email Me</a>
+<a class="btn wa" href="https://wa.me/923160994765?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20website." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M3 21l1.700-5A8.500 8.500 0 1112 20.500a8.500 8.500 0 01-4-1z"/></svg>Contact on WhatsApp</a>
+</div>
+</div>
+<form id="form" novalidate>
+<div class="f2"><label>Name<input name="name" autocomplete="name" required></label><label>Email<input name="email" type="email" autocomplete="email" required></label></div>
+<div class="f2"><label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+<label>Website Type<select name="type"><option>Business Website</option><option>Portfolio Website</option><option>Landing Page</option><option>E-commerce Website</option><option>Restaurant Website</option><option>Real Estate Website</option><option>School / Academy Website</option><option>AI &amp; Technology Website</option><option>Custom Website</option></select></label></div>
+<label>Message<textarea name="message" required></textarea></label>
+<button class="btn pri" type="submit">Send Message</button>
+<div id="msg" role="status"></div>
+<p class="hint">Sending opens your email app with your message ready to send to me.</p>
+</form>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="foot">
+<a class="logo" href="#top"><i></i>Hazim Gujjar</a>
+<nav aria-label="Footer"><a href="#services">Services</a><a href="#work">My Work</a><a href="#how">How It Works</a><a href="#contact">Contact</a></nav>
+</div>
+<p class="fine">&copy; 2026 Hazim Gujjar. Professional website development.</p>
+</div></footer>
+
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)},$$=function(s){return[].slice.call(document.querySelectorAll(s))};
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var b=$('#burger'),l=$('#links');
+b.addEventListener('click',function(){var o=l.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+$$('#links a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');b.setAttribute('aria-expanded',false)})});
+var els=$$('.rv');
+if('IntersectionObserver' in window&&!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(e,i){e.style.transitionDelay=(i%3)*80+'ms';io.observe(e)})}else els.forEach(function(e){e.classList.add('on')});
+var rig=$('#rig');
+if(rig&&!reduce)window.addEventListener('pointermove',function(e){var x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;rig.style.transform='rotateX('+(55-y*14)+'deg) rotateZ('+(-35+x*18)+'deg)'});
+$$('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})});
+$('#form').addEventListener('submit',function(e){
+e.preventDefault();var f=e.target,m=$('#msg');m.style.display='block';
+var n=f.name.value.trim(),em=f.email.value.trim(),ph=f.phone.value.trim(),t=f.type.value,ms=f.message.value.trim();
+if(!n||!/^\S+@\S+\.\S+$/.test(em)||!ms){m.textContent='Please enter your name, a valid email address and a message.';return}
+var body='Name: '+n+'\nEmail: '+em+'\nPhone: '+(ph||'Not provided')+'\nWebsite type: '+t+'\n\nMessage:\n'+ms;
+m.textContent='Opening your email app. If nothing opens, email me at hazimgujjar477@gmail.com.';
+window.location.href='mailto:hazimgujjar477@gmail.com?subject='+encodeURIComponent('Website enquiry: '+t)+'&body='+encodeURIComponent(body)});
+})();
+</script>
+</body>
+</html>
